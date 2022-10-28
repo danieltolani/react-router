@@ -8,16 +8,23 @@
   min-width: 17.875rem;
   padding: 2em 0 0 3.5em;
 
+  .alt_logo {
+    position: absolute;
+    position: fixed;
+    bottom: 5em;
+  }
+
   .sidebar-nav-container {
     margin-top: 2em;
 
     .side-bar-link {
       text-decoration: none;
-      color: blue;
+      color: #444444;
       display: flex;
       margin: 1.25em 0;
       // border: 2px solid red;
       align-items: center;
+      font-size: 1.125rem;
 
       & > svg {
         margin-right: 0.75em;
