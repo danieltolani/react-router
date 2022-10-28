@@ -1,0 +1,31 @@
+.nav-links {
+  border: 2px solid red;
+  border: 3px solid blue;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  min-width: 17.875rem;
+  padding: 2em 0 0 3.5em;
+}
+.nav-links .sidebar-nav-container {
+  margin-top: 2em;
+}
+.nav-links .sidebar-nav-container .side-bar-link {
+  text-decoration: none;
+  color: blue;
+  display: flex;
+  margin: 1.25em 0;
+  align-items: center;
+}
+.nav-links .sidebar-nav-container .side-bar-link > svg {
+  margin-right: 0.75em;
+}
+.nav-links .sidebar-nav-container .side-bar-link:first-child {
+  margin-top: 0;
+}
+.nav-links .sidebar-nav-container .side-bar-link:last-child {
+  margin-bottom: 0;
+}
+
+/*# sourceMappingURL=layout.css.map */
