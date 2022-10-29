@@ -1,6 +1,16 @@
 * {
   margin: 0;
   padding: 0;
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+}
+
+.main-wrapper {
+  position: absolute;
+  top: 125px;
+  right: 25px;
+  bottom: 25px;
+  left: 20.5rem;
 }
 
 /*# sourceMappingURL=App.css.map */

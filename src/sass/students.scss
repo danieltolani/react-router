@@ -1,0 +1,66 @@
+section.student-section{
+    // border: 2px solid red;
+
+    .dash-options{
+        display: flex;
+
+        button{
+            margin-right: 1.25em;
+            display: flex;
+            align-items: center;
+            padding: 1em;
+            border: 0;
+            background-color: black;
+            color: white;
+
+            &>svg{
+                margin-left: 1em;
+            }
+        }
+
+        input{
+            padding: 1em;
+            flex-grow: 1;
+        }
+    }
+
+    .student-card{
+        display: flex;
+        align-items: center;
+
+        .student-core-detail{
+            display: flex;
+            align-items: center;
+
+            & > h2 {
+                margin-left: 0.75em;
+            }
+        }
+
+        .student-school{
+            display: flex;
+            align-items: center;
+            padding: 0.375em 0.75em;
+            background-color: #ECF3FF;
+            border-radius: 50px;
+            margin-left: 1.5em;
+
+            & > p {
+                margin-left: 0.375em;
+            }
+        }
+
+        border: 2px solid red;
+
+        .card-icons-wrapper{
+            margin-left: auto;
+            display: flex;
+            border: 2px solid blue;
+
+            & > button.card-icons{
+                border: 0;
+                background: none;
+            }
+        }
+    }
+}

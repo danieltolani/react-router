@@ -1,0 +1,53 @@
+section.student-section .dash-options {
+  display: flex;
+}
+section.student-section .dash-options button {
+  margin-right: 1.25em;
+  display: flex;
+  align-items: center;
+  padding: 1em;
+  border: 0;
+  background-color: black;
+  color: white;
+}
+section.student-section .dash-options button > svg {
+  margin-left: 1em;
+}
+section.student-section .dash-options input {
+  padding: 1em;
+  flex-grow: 1;
+}
+section.student-section .student-card {
+  display: flex;
+  align-items: center;
+  border: 2px solid red;
+}
+section.student-section .student-card .student-core-detail {
+  display: flex;
+  align-items: center;
+}
+section.student-section .student-card .student-core-detail > h2 {
+  margin-left: 0.75em;
+}
+section.student-section .student-card .student-school {
+  display: flex;
+  align-items: center;
+  padding: 0.375em 0.75em;
+  background-color: #ECF3FF;
+  border-radius: 50px;
+  margin-left: 1.5em;
+}
+section.student-section .student-card .student-school > p {
+  margin-left: 0.375em;
+}
+section.student-section .student-card .card-icons-wrapper {
+  margin-left: auto;
+  display: flex;
+  border: 2px solid blue;
+}
+section.student-section .student-card .card-icons-wrapper > button.card-icons {
+  border: 0;
+  background: none;
+}
+
+/*# sourceMappingURL=students.css.map */
