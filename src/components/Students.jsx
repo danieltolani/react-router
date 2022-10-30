@@ -1,12 +1,15 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { UserContext } from "./UserContext";
 import '../styles/students.css'
 
 
 
 const Students = (props) => {
     const [studentDataArray, setStudentDataArray] = useState(['mango','banana', 'apple'])
+    const msg = useContext(UserContext)
 
+    // console.log(msg)
     // const studentElement = studentDataArray.map(student => {
     //     return <h1> {student} </h1>
     // })

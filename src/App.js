@@ -5,60 +5,44 @@ import ErrorPage from "./components/ErrorPage";
 import Layout from "./components/Layout";
 import Engineering from "./components/Engineering";
 import Students from "./components/Students";
+import { UserContext } from "./components/UserContext";
 
 import "../src/styles/App.css";
 
 import { BrowserRouter as Router, Routes, Route, json } from "react-router-dom";
-import React, {useEffect,useState} from "react";
+import React, { useEffect, useState, useContext, useMemo } from "react";
+import { useFetch } from "./components/useFetch";
 
 const App = () => {
+  const [me, setMe] = useState([])
 
-  const [studentBio, setStudentBio] = useState({
-      imgUrl:"",
-      firstName:"",
-      lastName:"",
-      reg_num:"",
-  })
+  const { data } = useFetch(
+    "https://randomuser.me/api/?results=100"
+  );
 
-  useEffect(() => {
-    fetch('https://randomuser.me/api/?results=100')
-      .then(res => {
-        if (res.ok) {
-          return res.json()
-        } else {
-          console.log("There was an error")
-        }
-      })
-      .then(res => setStudentBio(res.results))
-      // .catch(error => console.log('Error'))
-    // return () => {
-    //   cleanup;
-    // };
-  }, []);
-  
-  console.log(studentBio[0])
+  const meMain = useMemo(() => (data))
 
-  const gender = studentBio;
-
-  console.log(gender)
-
+  console.log(meMain)
   return (
-    <Router>
-      {/* layout component containing navs */}
-      <Layout />
+    <UserContext.Provider value="Hello">
+      <Router>
+        {/* layout component containing navs */}
+        <Layout />
 
-      <main className="main-wrapper">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="schools" element={<Schools />}>
-          <Route path="engineering" element={<Engineering />} />
-        </Route>
-        <Route path="students" element={<Students />} />
-        <Route path="*" element={<ErrorPage />} />
-      </Routes>
-      </main>
-      
-    </Router>
+        <main className="main-wrapper">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="schools" element={<Schools />}>
+              <Route path="engineering" element={<Engineering />} />
+            </Route>
+
+            <Route path="students" element={<Students />} />
+
+            <Route path="*" element={<ErrorPage />} />
+          </Routes>
+        </main>
+      </Router>
+    </UserContext.Provider>
   );
 };
 
