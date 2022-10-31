@@ -5,26 +5,23 @@ import ErrorPage from "./components/ErrorPage";
 import Layout from "./components/Layout";
 import Engineering from "./components/Engineering";
 import Students from "./components/Students";
+import { UserFetch } from "./components/utils/userData";
 import { UserContext } from "./components/UserContext";
-
+import { useMemo, useState } from "react";
 import "../src/styles/App.css";
 
-import { BrowserRouter as Router, Routes, Route, json } from "react-router-dom";
-import React, { useEffect, useState, useContext, useMemo } from "react";
-import { useFetch } from "./components/useFetch";
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import React from "react";
 
 const App = () => {
-  const [me, setMe] = useState([])
+  
+  const ff = UserFetch(); 
+  const [user, setUser] = useState('hello from context')
 
-  const { data } = useFetch(
-    "https://randomuser.me/api/?results=100"
-  );
+  const value = useMemo(() => ({user, setUser}), [user, setUser])
 
-  const meMain = useMemo(() => (data))
-
-  console.log(meMain)
   return (
-    <UserContext.Provider value="Hello">
+    <UserContext.Provider value={value}>
       <Router>
         {/* layout component containing navs */}
         <Layout />
@@ -32,11 +29,11 @@ const App = () => {
         <main className="main-wrapper">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="schools" element={<Schools />}>
+            <Route path="/schools" element={<Schools />}>
               <Route path="engineering" element={<Engineering />} />
             </Route>
 
-            <Route path="students" element={<Students />} />
+            <Route path="/students" element={<Students />} />
 
             <Route path="*" element={<ErrorPage />} />
           </Routes>
