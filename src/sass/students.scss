@@ -3,6 +3,8 @@ section.student-section{
 
     .dash-options{
         display: flex;
+        margin-bottom: 1.875em;
+
 
         button{
             margin-right: 1.25em;
@@ -27,13 +29,29 @@ section.student-section{
     .student-card{
         display: flex;
         align-items: center;
+        padding: 0.75em 1.5em;
+
+        background: #FFFFFF;
+        // border: 1px solid #E9E9E9;
+        box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
+        margin-bottom: 1.25em;
 
         .student-core-detail{
             display: flex;
             align-items: center;
+            // min-height: 3.875rem;
 
             & > h2 {
                 margin-left: 0.75em;
+                font-size: 1.125rem;
+            }
+
+            & > img {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                object-fit: cover;
             }
         }
 
@@ -50,16 +68,21 @@ section.student-section{
             }
         }
 
-        border: 2px solid red;
+        // border: 2px solid red;
 
         .card-icons-wrapper{
             margin-left: auto;
             display: flex;
-            border: 2px solid blue;
+            // border: 2px solid blue;
 
             & > button.card-icons{
                 border: 0;
                 background: none;
+                cursor: pointer;
+
+                &:last-child {
+                    margin-left: 1.875em;
+                }
             }
         }
     }
