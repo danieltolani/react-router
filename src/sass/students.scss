@@ -1,5 +1,57 @@
 section.student-section{
+    display: flex;
+    flex-direction: column;
     // border: 2px solid red;
+    
+
+    .pagination-wrapper{
+        display: flex;
+        align-items: center;
+        align-self: right;
+        margin-top: 3em;
+        align-self: flex-end;
+        // place-content: right;
+        
+        button.page-nav-btn{
+            border: 0;
+            background: rgb(239, 244, 248);
+            height: 40px;
+            width: 40px;
+            margin-left: 1.25em;
+            color: #bdbcc5;
+            font-weight: 600;
+            font-size: 1.125rem;
+            cursor: pointer;
+
+            &:hover{
+                color: black;
+            }
+        }
+
+        .prevPage-wrapper{
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+
+            &:last-child{
+                margin-left: 2em;
+            }
+            
+            
+            & > h3:first-child {
+                margin-right: 0.375em;
+            }
+
+            & > svg:first-child {
+                margin-right: 0.375em;
+            }
+
+            button.page-nav-btn{
+                border: 0;
+            }
+        }
+    }
 
     .dash-options{
         display: flex;

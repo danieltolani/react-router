@@ -1,3 +1,45 @@
+section.student-section {
+  display: flex;
+  flex-direction: column;
+}
+section.student-section .pagination-wrapper {
+  display: flex;
+  align-items: center;
+  align-self: right;
+  margin-top: 3em;
+  align-self: flex-end;
+}
+section.student-section .pagination-wrapper button.page-nav-btn {
+  border: 0;
+  background: rgb(239, 244, 248);
+  height: 40px;
+  width: 40px;
+  margin-left: 1.25em;
+  color: #bdbcc5;
+  font-weight: 600;
+  font-size: 1.125rem;
+  cursor: pointer;
+}
+section.student-section .pagination-wrapper button.page-nav-btn:hover {
+  color: black;
+}
+section.student-section .pagination-wrapper .prevPage-wrapper {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+section.student-section .pagination-wrapper .prevPage-wrapper:last-child {
+  margin-left: 2em;
+}
+section.student-section .pagination-wrapper .prevPage-wrapper > h3:first-child {
+  margin-right: 0.375em;
+}
+section.student-section .pagination-wrapper .prevPage-wrapper > svg:first-child {
+  margin-right: 0.375em;
+}
+section.student-section .pagination-wrapper .prevPage-wrapper button.page-nav-btn {
+  border: 0;
+}
 section.student-section .dash-options {
   display: flex;
   margin-bottom: 1.875em;
