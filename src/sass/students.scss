@@ -10,6 +10,7 @@ section.student-section{
         align-self: right;
         margin-top: 3em;
         align-self: flex-end;
+        border: 0;
         // place-content: right;
         
         button.page-nav-btn{
@@ -28,10 +29,13 @@ section.student-section{
             }
         }
 
-        .prevPage-wrapper{
+        button.prevPage-wrapper{
             display: flex;
             align-items: center;
             cursor: pointer;
+            border: 0;
+            background: none;
+
 
 
             &:last-child{

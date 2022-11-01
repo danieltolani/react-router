@@ -8,6 +8,7 @@ section.student-section .pagination-wrapper {
   align-self: right;
   margin-top: 3em;
   align-self: flex-end;
+  border: 0;
 }
 section.student-section .pagination-wrapper button.page-nav-btn {
   border: 0;
@@ -23,21 +24,23 @@ section.student-section .pagination-wrapper button.page-nav-btn {
 section.student-section .pagination-wrapper button.page-nav-btn:hover {
   color: black;
 }
-section.student-section .pagination-wrapper .prevPage-wrapper {
+section.student-section .pagination-wrapper button.prevPage-wrapper {
   display: flex;
   align-items: center;
   cursor: pointer;
+  border: 0;
+  background: none;
 }
-section.student-section .pagination-wrapper .prevPage-wrapper:last-child {
+section.student-section .pagination-wrapper button.prevPage-wrapper:last-child {
   margin-left: 2em;
 }
-section.student-section .pagination-wrapper .prevPage-wrapper > h3:first-child {
+section.student-section .pagination-wrapper button.prevPage-wrapper > h3:first-child {
   margin-right: 0.375em;
 }
-section.student-section .pagination-wrapper .prevPage-wrapper > svg:first-child {
+section.student-section .pagination-wrapper button.prevPage-wrapper > svg:first-child {
   margin-right: 0.375em;
 }
-section.student-section .pagination-wrapper .prevPage-wrapper button.page-nav-btn {
+section.student-section .pagination-wrapper button.prevPage-wrapper button.page-nav-btn {
   border: 0;
 }
 section.student-section .dash-options {

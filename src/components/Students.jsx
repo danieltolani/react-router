@@ -75,10 +75,10 @@ const Students = (props) => {
       {userElements}
 
       <div className="pagination-wrapper">
-        <div className="prevPage-wrapper" onClick={()=> setPage((prev) => prev - 1)}>
+        <button disabled={page<=1} className="prevPage-wrapper" onClick={()=> setPage((prev) => prev - 1)}>
           <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg" > <path d="m7.5 10.058-3.26-3.26a.993.993 0 0 1 0-1.4l3.26-3.26" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg>
           <h3 className="paging-text"> Previous </h3>
-        </div>
+        </button>
 
         {Array.from({ length: pages }, (value, index) => index + 1).map(
           (each) => (
@@ -88,10 +88,10 @@ const Students = (props) => {
           )
         )}
 
-        <div className="prevPage-wrapper" onClick={()=> setPage((prev) => prev + 1)} >
+        <button disabled={page>=pages} className="prevPage-wrapper" onClick={()=> setPage((prev) => prev + 1)} >
           <h3 className="paging-text"> Next </h3>
           <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m4.5 10.058 3.26-3.26a.993.993 0 0 0 0-1.4L4.5 2.138" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
+        </button>
       </div>
     </section>
   );
